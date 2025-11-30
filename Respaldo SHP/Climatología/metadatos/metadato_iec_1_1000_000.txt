@@ -1,0 +1,32 @@
+manueIdentifier: 
+
+Title: Índices de Extremos Climáticos
+
+Description
+
+Los Índices de Extremos Climáticos, se integran por 196 archivos vectoriales escala 1: 1 000 000 (98 para estaciones meteorológicas, tipo punto y 98 para regiones climáticas, tipo polígono) con datos anuales, mensuales y estacionales de 1494 estaciones y 11 regiones climáticas, para periodos comprendidos entre 1902 a 2012. Incluye datos relacionados con el promedio, tendencias y anomalías climáticas de los índices: días secos consecutivos (CDD), días húmedos consecutivos (CWD), precipitación total anual en los días húmedos (PRCPTOT), precipitación máxima en un día (RX1day), precipitación máxima en cinco días (Rx5day), número de días con lluvia mayor a 10 mm (R10mm), número de días con lluvia mayor a 20 mm (R20mm), número de días con lluvia mayor a 25 mm (R25mm), días muy húmedos (R95p), días extremadamente húmedos (R99p), índice simple de intensidad diaria (SDII), así como duración de los períodos fríos (CSDI), días de heladas (FD0), duración de la estación de cultivo (GSL), días de hielo (ID0), días de verano (SU25), noches tropicales (TR20), temperatura mínima extrema (TNn), temperatura máxima más baja (TXn), rango diurno de temperatura (DTR), frecuencia de días calurosos o calientes (TX90p), temperatura máxima extrema (TXx), frecuencia de días frescos o fríos (TX10p), temperatura mínima más alta (TNx), frecuencia de noches frías (TN10p), frecuencia de noches cálidas (TN90p), duración de los períodos cálidos o calientes (WSDI), temperatura máxima promedio (TMAXMEAN) y temperatura mínima promedio (TMINMEAN). Dado que estos archivos geoespaciales son el resultado, primero, del cálculo de los índices a partir de bases de datos diarias de temperatura y precipitación y, segundo, de su posterior análisis climático, lo cual derivó en una gran cantidad de información, pues son más de 400 atributos que describen el comportamiento de cada uno de los 29 índices analizados, se decidió, para fines prácticos, mejor manejo y conocimiento de la información, organizarlos en capas de información de acuerdo al tema que tratan, es decir, en 1. Promedios, 2. Anomalías, y 3. Tendencias. Cada capa incluye los archivos shp de los 29 índices en su tema correspondiente.
+
+Lo anterior, permite describir y utilizar la información de manera más ordenada, sin dejar a un lado la idea de que los temas, en conjunto, describen las condiciones climáticas en una estación meteorológica o región climática
+
+
+Modified: 2022-06-30
+
+Publisher: Instituto Nacional de Estadística y Geografía, INEGI
+
+Mbox: atencion.usuarios@inegi.org.mx
+
+License: https://www.inegi.org.mx/inegi/terminos.html
+
+DataDictionary: Diccionario de Datos de Índices de Extremos Climáticos escala 1: 1 000 000
+
+Keyword: "anomalía climática", "cambio climático", "índices de extremos climáticos", "tendencia climática" 
+
+ContactPoint: Mtro. J. Armando Aguiar Rodríguez, 800 111 46 34
+
+Temporal: 1902-2012
+
+Spatial: Estados Unidos Mexicanos
+
+AccrualPeriodicity: irregular.
+
+Distribution: https://www.inegi.org.mx/

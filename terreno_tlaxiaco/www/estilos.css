@@ -1,0 +1,238 @@
+/* ============================================================
+   PALETA PERSONALIZADA TLAXIACO
+   #F0F8F6  #C7EFD4  #8CC9AF  #4C8F77  #1F4F3E
+   ============================================================ */
+
+/* ------------------------------------------------------------
+   BODY Y FUENTES
+   ------------------------------------------------------------ */
+body, .content-wrapper, .main-footer {
+  background-color: #F0F8F6 !important;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif !important;
+  color: #1F4F3E;
+}
+
+/* ------------------------------------------------------------
+   HEADER SUPERIOR (NAVBAR)
+   ------------------------------------------------------------ */
+.skin-blue .main-header .navbar {
+  background-color: #4C8F77 !important;
+  border-bottom: 2px solid #1F4F3E !important;
+}
+
+.skin-blue .main-header .navbar .sidebar-toggle:hover {
+  background-color: #8CC9AF !important;
+}
+
+/* Logo */
+.skin-blue .main-header .logo {
+  background-color: #1F4F3E !important;
+  color: #F0F8F6 !important;
+  font-size: 15px !important;
+  font-weight: 700 !important;
+  white-space: normal !important;
+  line-height: 1.2 !important;
+  padding: 12px 5px !important;
+}
+
+.skin-blue .main-header .logo:hover {
+  background-color: #4C8F77 !important;
+}
+
+/* ------------------------------------------------------------
+   SIDEBAR
+   ------------------------------------------------------------ */
+.skin-blue .main-sidebar {
+  background-color: #1F4F3E !important;
+  color: #C7EFD4 !important;
+  width: 200px !important;
+}
+
+.skin-blue .sidebar-menu > li > a {
+  color: #C7EFD4 !important;
+  font-size: 15px !important;
+}
+
+.skin-blue .sidebar-menu > li.active > a,
+.skin-blue .sidebar-menu > li:hover > a {
+  background-color: #4C8F77 !important;
+  color: #F0F8F6 !important;
+  border-left-color: #8CC9AF !important;
+}
+
+
+/* Ajustar contenido para que no se meta debajo del sidebar */
+.content-wrapper, .main-footer, .right-side {
+  margin-left: 200px !important;
+}
+
+/* Ajustar el logo/título del header al nuevo ancho */
+.main-header .logo {
+  width: 200px !important;
+}
+
+
+
+/* ------------------------------------------------------------
+   CONTENT AREA
+   ------------------------------------------------------------ */
+.content-wrapper {
+  background-color: #F0F8F6 !important;
+  padding: 20px !important;
+}
+
+/* ------------------------------------------------------------
+   INFO CARDS PERSONALIZADAS
+   ------------------------------------------------------------ */
+.info-card {
+  background-color: #C7EFD4;
+  border-radius: 12px;
+  padding: 20px;
+  margin: 10px 0;
+  border-left: 6px solid #4C8F77;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  height: 130px;
+}
+
+.info-card h3 {
+  margin: 0;
+  font-size: 16px;
+  color: #1F4F3E;
+  font-weight: bold;
+}
+
+.info-card .value {
+  font-size: 26px;
+  font-weight: 800;
+  margin-top: 5px;
+  color: #1F4F3E;
+}
+
+/* Para que las cards no se expandan horizontalmente */
+.info-card {
+  width: 100%;
+}
+
+/* ------------------------------------------------------------
+   TABLAS Y BOXES
+   ------------------------------------------------------------ */
+.box {
+  border-top: 3px solid #4C8F77 !important;
+}
+
+.box-header {
+  background-color: #8CC9AF !important;
+  color: #1F4F3E !important;
+  padding: 10px !important;
+  border-radius: 3px 3px 0 0;
+}
+
+.box-body {
+  background-color: #F0F8F6 !important;
+}
+
+/* ------------------------------------------------------------
+   LEAFLET: QUITAR FONDO DE TOOLTIP (EMOJIS)
+   ------------------------------------------------------------ */
+.leaflet-tooltip,
+.leaflet-tooltip-top,
+.leaflet-tooltip-bottom,
+.leaflet-tooltip-left,
+.leaflet-tooltip-right {
+  background-color: transparent !important;
+  border: none !important;
+  box-shadow: none !important;
+  color: #1F4F3E !important;
+  font-size: 14px !important;
+}
+
+/* Emoji labels */
+.leaflet-tooltip span {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+/* ------------------------------------------------------------
+   LEAFLET POPUPS
+   ------------------------------------------------------------ */
+.leaflet-popup-content-wrapper {
+  background: #F0F8F6;
+  border-radius: 8px;
+  border: 2px solid #4C8F77;
+  color: #1F4F3E;
+}
+
+.leaflet-popup-tip {
+  background: #F0F8F6;
+  border: 2px solid #4C8F77;
+}
+
+/* ------------------------------------------------------------
+   PDF Viewer (iframe)
+   ------------------------------------------------------------ */
+iframe {
+  border: none !important;
+  background: #FFFFFF;
+  box-shadow: 0 0 8px rgba(0,0,0,0.15);
+}
+
+/* ------------------------------------------------------------
+   BOTONES
+   ------------------------------------------------------------ */
+.btn {
+  background-color: #4C8F77 !important;
+  border-color: #1F4F3E !important;
+  color: #F0F8F6 !important;
+  font-weight: bold !important;
+}
+
+.btn:hover {
+  background-color: #8CC9AF !important;
+  color: #1F4F3E !important;
+}
+
+/* ------------------------------------------------------------
+   SCROLLBAR
+   ------------------------------------------------------------ */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #C7EFD4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4C8F77;
+  border-radius: 10px;
+}
+
+/* ------------------------------------------------------------
+   RESPONSIVO
+   ------------------------------------------------------------ */
+@media (max-width: 991px) {
+  .info-card {
+    height: auto;
+  }
+}
+
+/* Quitar botón hamburguesa */
+.main-header .navbar .sidebar-toggle {
+  display: none !important;
+}
+
+/* Eliminar contenedor del botón (espacio negro) */
+.main-header .navbar .navbar-custom-menu,
+.main-header .navbar .navbar-right {
+  display: none !important;
+}
+
+/* Alinear header con el sidebar */
+.main-header .navbar {
+  width: calc(100% - 200px) !important;   /* Ajusta si cambias ancho sidebar */
+  margin-left: 200px !important;
+}
+
+
+
+

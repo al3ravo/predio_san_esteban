@@ -1,0 +1,34 @@
+Bitácora de cambios de la Red Nacional de Caminos 2024,,,,,
+Nombre de campo o archivo,Dato publicado,Dato nuevo,Estatus del cambio,Fecha de modificación,Observaciones del cambio
+maniobra_prohibida.shp,"Campo Id_Red1 de longitud 6
+Campo Id_Red2 de longitud 6
+Campo Id_Red3 de longitud 6
+Campo Id_Red4 de longitud 6
+Campo Id_Red5 de longitud 6
+Campo Id_Red6 de longitud 6","Campo Id_Red1 de longitud 9
+Campo Id_Red2 de longitud 9
+Campo Id_Red3 de longitud 9
+Campo Id_Red4 de longitud 9
+Campo Id_Red5 de longitud 9
+Campo Id_Red6 de longitud 9",Modificación,14/04/2025,"En la capa de Maniobras Prohibidas se cambió la longitud de los campos Id_Red1, Id_Red2, Id_Red3, Id_Red4, Id_Red5, Id_Red6 de 6 a 9 posiciones para que guarden identificadores que exceden valores a 999999.
+"
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,
+,,,,,

@@ -1,0 +1,405 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+<Metadata>
+<MD_DataIdentification>
+<title>Índices de Extremos Climáticos.</title>
+<purpose>Proporcionar a usuarios, internos y externos del Instituto, datos para México sobre promedios, variaciones, tendencias y anomalías climáticas a nivel de estación meteorológica (1494 estaciones) y regiones climáticas (11 regiones) de 27 índices de extremos climáticos (11 de precipitación y 16 de temperatura) y dos más de temperatura, a través de series anuales, mensuales y estacionales, para varios periodos de tiempo comprendidos entre 1902 a 2012. Esta información coadyuva al estudio de la evolución espacial y temporal de eventos extremos de temperatura y precipitación en nuestro territorio, permitiendo conocer e identificar cambios en el régimen térmico y de humedad del país.</purpose>
+<abstract>Los Índices de Extremos Climáticos, se integran por 196 archivos vectoriales escala 1: 1 000 000 (98 para estaciones meteorológicas, tipo punto y 98 para regiones climáticas, tipo polígono) con datos anuales, mensuales y estacionales de 1494 estaciones y 11 regiones climáticas, para periodos comprendidos entre 1902 a 2012. Incluye datos relacionados con el promedio, tendencias y anomalías climáticas de los índices: días secos consecutivos (CDD), días húmedos consecutivos (CWD), precipitación total anual en los días húmedos (PRCPTOT), precipitación máxima en un día (RX1day), precipitación máxima en cinco días (Rx5day), número de días con lluvia mayor a 10 mm (R10mm), número de días con lluvia mayor a 20 mm (R20mm), número de días con lluvia mayor a 25 mm (R25mm), días muy húmedos (R95p), días extremadamente húmedos (R99p), índice simple de intensidad diaria (SDII), así como duración de los períodos fríos (CSDI), días de heladas (FD0), duración de la estación de cultivo (GSL), días de hielo (ID0), días de verano (SU25), noches tropicales (TR20), temperatura mínima extrema (TNn), temperatura máxima más baja (TXn), rango diurno de temperatura (DTR), frecuencia de días calurosos o calientes (TX90p), temperatura máxima extrema (TXx), frecuencia de días frescos o fríos (TX10p), temperatura mínima más alta (TNx), frecuencia de noches frías (TN10p), frecuencia de noches cálidas (TN90p), duración de los períodos cálidos o calientes (WSDI), temperatura máxima promedio (TMAXMEAN) y temperatura mínima promedio (TMINMEAN). Dado que estos archivos geoespaciales son el resultado, primero, del cálculo de los índices a partir de bases de datos diarias de temperatura y precipitación y, segundo, de su posterior análisis climático, lo cual derivó en una gran cantidad de información, pues son más de 400 atributos que describen el comportamiento de cada uno de los 29 índices analizados, se decidió, para fines prácticos, mejor manejo y conocimiento de la información, organizarlos en capas de información de acuerdo al tema que tratan, es decir, en 1. Promedios, 2. Anomalías, y 3. Tendencias. Cada capa incluye los archivos shp de los 29 índices en su tema correspondiente.
+
+Lo anterior, permite describir y utilizar la información de manera más ordenada, sin dejar a un lado la idea de que los temas, en conjunto, describen las condiciones climáticas en una estación meteorológica o región climática. 
+</abstract>
+<MD_DataIdentification_language>ES - Español.</MD_DataIdentification_language>
+<topicCategory>
+<principalTopic>  3. Atmósfera climatológica, meteorológica: Procesos y fenómenos atmosféricos. </principalTopic>
+<groupCategory>1. Grupo de datos de recursos naturales y clima: Subdivisión de la Infraestructura de Datos Espaciales de México que representan espacialmente la distribución y naturaleza de los recursos naturales que existen en el territorio nacional, así como la configuración de sus diversos climas. A través de ellos puede obtenerse información del estado, presión y respuesta de la interacción humana con su medio ambiente.</groupCategory>
+</topicCategory>
+<keyword>Anomalía climática</keyword>
+<type>5. Tema: La palabra clave que identifica un tema o materia particular.</type>
+<keyword>Cambio climático</keyword>
+<type>1. Disciplina: La palabra clave identifica una rama de la enseñanza o aprendizaje especializado.</type>
+<keyword>Índices de Extremos Climáticos</keyword>
+<type>5. Tema: La palabra clave que identifica un tema o materia particular.</type>
+<keyword>Tendencia climática</keyword>
+<type>5. Tema: La palabra clave que identifica un tema o materia particular.</type>
+<thesaurusName>Diccionario de Datos de Índices de Extremos Climáticos escala 1: 1 000 000, Guidelines on Analysis of extremes in a changing climate in support of informed decisions for adaptation, Guía para el cálculo y uso de índices de cambio climático en México.</thesaurusName>
+<edition>2020</edition>
+<presentationForm>  5. Mapa digital: Mapa representado en formato raster o vector.</presentationForm>
+<CI_OnlineResource>
+<CI_OnlineResource_linkage>http://www.inegi.org.mx/</CI_OnlineResource_linkage>
+<CI_OnlineResource_description>Página web donde se encuentra la información para obtener el recurso en base a las políticas institucionales y de los centros de información autorizados.</CI_OnlineResource_description>
+</CI_OnlineResource>
+<maintenanceAndUpdateFrequency>  9. No programado: La actualización de los datos no está planeada.</maintenanceAndUpdateFrequency>
+<MD_DataIdentification_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</MD_DataIdentification_characterSet>
+<graphfilename>IEC.jpg</graphfilename>
+<specuse>USO 1 (externo):
+Profesionistas de ciencias de la Tierra y la educación, potencialmente podrían utilizar esta información como apoyo y de referencia para estudios propios sobre la evolución temporal y espacial de valores de eventos extremos de temperatura y precipitación, con la finalidad de conocer e identificar cambios en el régimen térmico y de humedad del país. A través del uso de Sistemas de Información Geográfica y análisis geoespacial es posible obtener diagnósticos y evoluciones climáticas que coadyuven en el diseño e implementación de proyectos de educación ambiental y ecológicos, así como de estudios de vulnerabilidad, impacto y adaptación al cambio climático; útiles en el desarrollo de estrategias, acciones y de planeación en materia de riegos climáticos. Por lo que podría apoyar el trabajo de sectores como el educativo, ambiental, salud pública, agrícola, ganadero, urbanístico y de ciudadanos en general.
+
+USO 2 (interno):
+La Dirección General de Geografía y Medio Ambiente del INEGI, potencialmente podría utilizar esta información como referencia conceptual y de verificación de información en estudios relacionados con recursos naturales, en los que la evolución temporal y espacial de valores de eventos extremos de temperatura y precipitación y el  conocimiento e identificación de cambios en el régimen térmico y de humedad del país sean importantes para justificar posibles repercusiones ecológicas y socioeconómicas. Esto, a través del procesamiento digital de la información, empleando Sistemas de Información Geográfica y análisis geoespacial. Por lo que su destino potencial son las áreas de Integración de información geográfica y del medio ambiente, de estadísticas ambientales y de recursos naturales.
+</specuse>
+</MD_DataIdentification>
+<CI_Date>
+<Dates_Events>
+<date>2014-01-01</date>
+<dateType>1. Creación: Indicador  de la fecha que especifica cuando fue creado el recurso.</dateType>
+</Dates_Events>
+<Ad_Date>
+<date_creation>2017-12-31</date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname>Base de datos diaria de temperatura máxima, temperatura mínima y precipitación de la Base de Datos Climatológica del Servicio Meteorológico Nacional.</inpname>
+</Ad_Date>
+</CI_Date>
+<CI_ResponsibleParty>
+<CI_ResponsibleParty_individualName>Mtro. J. Armando Aguiar Rodríguez </CI_ResponsibleParty_individualName>
+<CI_ResponsibleParty_organisationName>Instituto Nacional de Estadística y Geografía - INEGI.</CI_ResponsibleParty_organisationName>
+<CI_ResponsibleParty_positionName>Director de Servicios de Información.</CI_ResponsibleParty_positionName>
+<CI_ResponsibleParty_voice>(449) 910 53 00. Extensión 5301. Lada 800 111 46 34</CI_ResponsibleParty_voice>
+<CI_ResponsibleParty_facsimile></CI_ResponsibleParty_facsimile>
+<CI_ResponsibleParty_deliveryPoint>Avenida Héroe de Nacozari Sur 2301. Fraccionamiento Jardines del Parque, entre Calle INEGI, Avenida del Lago y Avenida Paseo de las Garzas.</CI_ResponsibleParty_deliveryPoint>
+<CI_ResponsibleParty_city>Aguascalientes.</CI_ResponsibleParty_city>
+<CI_ResponsibleParty_administrativeArea>Aguascalientes.</CI_ResponsibleParty_administrativeArea>
+<CI_ResponsibleParty_postalCode>20276</CI_ResponsibleParty_postalCode>
+<CI_ResponsibleParty_country>México.</CI_ResponsibleParty_country>
+<CI_ResponsibleParty_electronicMailAddress>atencion.usuarios@inegi.org.mx</CI_ResponsibleParty_electronicMailAddress>
+<CI_ResponsibleParty_linkage>http://www.inegi.org.mx/ </CI_ResponsibleParty_linkage>
+<CI_ResponsibleParty_role>  5. Distribuidor: Parte que distribuye el recurso.</CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<geographicElement>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>-118.456667</westBoundLongitude>
+<eastBoundLongitude>-86.71</eastBoundLongitude>
+<southBoundLatitude>14.540833</southBoundLatitude>
+<northBoundLatitude>32.718333</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<spatialRepresentationType>1. Vector: Los datos vectoriales se utilizan para representar datos espaciales.</spatialRepresentationType>
+</geographicElement>
+<MD_ReferenceSystem>
+<ReferenceHorizontalSystem>
+<geograph>
+<latres>0.00000001</latres>
+<longres>0.00000001</longres>
+<geogunit>Grados decimales.</geogunit>
+</geograph>
+<planar>
+<mapprojn>
+<lambertc>
+<lambertc_stdparll></lambertc_stdparll>
+<lambertc_longcm></lambertc_longcm>
+<lambertc_latprjo></lambertc_latprjo>
+<lambertc_feast></lambertc_feast>
+<lambertc_fnorth></lambertc_fnorth>
+</lambertc>
+<mercatort>
+<mercatort_sfctrmer></mercatort_sfctrmer>
+<mercatort_longcm></mercatort_longcm>
+<mercatort_latprjo></mercatort_latprjo>
+<mercatort_feast></mercatort_feast>
+<mercatort_fnorth></mercatort_fnorth>
+</mercatort>
+<mercator>
+<mercator_stdparll></mercator_stdparll>
+<mercator_sfec></mercator_sfec>
+<mercator_longcm></mercator_longcm>
+<mercator_feast></mercator_feast>
+<mercator_fnorth></mercator_fnorth>
+</mercator>
+<tme>
+<tme_sfctrmer></tme_sfctrmer>
+<tme_longcm></tme_longcm>
+<tme_latprjo></tme_latprjo>
+<tme_feast></tme_feast>
+<tme_fnorth></tme_fnorth>
+</tme>
+<anoth_proj_def></anoth_proj_def>
+</mapprojn>
+<gridcoordinatessystem>
+<utm>
+<utm_zone></utm_zone>
+<utm_sfctrmer></utm_sfctrmer>
+<utm_longcm></utm_longcm>
+<utm_latprjo></utm_latprjo>
+<utm_feast></utm_feast>
+<utm_fnorth></utm_fnorth>
+</utm>
+</gridcoordinatessystem>
+<local_planar>
+<local_planar_desc></local_planar_desc>
+<local_planar_geo_inf></local_planar_geo_inf>
+</local_planar>
+<planci>
+<plance></plance>
+<coord_repres>
+<absres></absres>
+<ordres></ordres>
+</coord_repres>
+<distance_and_bearing_repres>
+<distance_res></distance_res>
+<bearing_res></bearing_res>
+<bearing_uni></bearing_uni>
+<ref_bearing_dir></ref_bearing_dir>
+<ref_bearing_mer></ref_bearing_mer>
+</distance_and_bearing_repres>
+<plandu></plandu>
+</planci>
+</planar>
+<local_coordinates>
+<local_desc></local_desc>
+<local_geo_inf></local_geo_inf>
+</local_coordinates>
+<geodetic>
+<horizdn>ITRF08 época 2010.0.</horizdn>
+<ellips>Sistema Geodésico de Referencia de 1980 (GRS80).</ellips>
+<semiaxis>6378137.0</semiaxis>
+<denflat>298.257222101</denflat>
+</geodetic>
+</ReferenceHorizontalSystem>
+<ReferenceVerticalSystem>
+<altsys>
+<altdatum></altdatum>
+<altres></altres>
+<altunits></altunits>
+<altenc> </altenc>
+</altsys>
+<depthsys>
+<depthdn></depthdn>
+<depthres></depthres>
+<depthdu></depthdu>
+<depthem> </depthem>
+</depthsys>
+</ReferenceVerticalSystem>
+</MD_ReferenceSystem>
+<DQ_DataQuality>
+<DQ_Scope>
+<level>  5. Conjunto de datos espaciales: Información aplicada al conjunto de datos espaciales.</level>
+</DQ_Scope>
+<report>
+<DQ_Completeness>
+<DQ_Completeness_evalqualsubname>
+<DQ_Completeness_nameOfMeasure></DQ_Completeness_nameOfMeasure>
+<DQ_Completeness_measureDescription></DQ_Completeness_measureDescription>
+<DQ_Completeness_result>
+<DQ_Completeness_DQ_QuantitativeResult>
+<DQ_Completeness_valueUnit></DQ_Completeness_valueUnit>
+<DQ_Completeness_value></DQ_Completeness_value></DQ_Completeness_DQ_QuantitativeResult>
+</DQ_Completeness_result>
+</DQ_Completeness_evalqualsubname>
+</DQ_Completeness>
+<DQ_LogicConsistency>
+<DQ_LogicConsistency_evalqualsubname>
+<DQ_LogicConsistency_nameOfMeasure></DQ_LogicConsistency_nameOfMeasure>
+<DQ_LogicConsistency_measureDescription></DQ_LogicConsistency_measureDescription>
+<DQ_LogicConsistency_result>
+<DQ_LogicConsistency_DQ_QuantitativeResult>
+<DQ_LogicConsistency_valueUnit></DQ_LogicConsistency_valueUnit>
+<DQ_LogicConsistency_value></DQ_LogicConsistency_value></DQ_LogicConsistency_DQ_QuantitativeResult>
+</DQ_LogicConsistency_result>
+</DQ_LogicConsistency_evalqualsubname>
+</DQ_LogicConsistency>
+<PositionalAccuracy>
+<PositionalAccuracy_evalqualsubname>
+<PositionalAccuracy_nameOfMeasure></PositionalAccuracy_nameOfMeasure>
+<PositionalAccuracy_measureDescription></PositionalAccuracy_measureDescription>
+<PositionalAccuracy_result>
+<PositionalAccuracy_DQ_QuantitativeResult>
+<PositionalAccuracy_valueUnit></PositionalAccuracy_valueUnit>
+<PositionalAccuracy_value></PositionalAccuracy_value></PositionalAccuracy_DQ_QuantitativeResult>
+</PositionalAccuracy_result>
+</PositionalAccuracy_evalqualsubname>
+</PositionalAccuracy>
+<TemporalAccuracy>
+<TemporalAccuracy_evalqualsubname>
+<TemporalAccuracy_nameOfMeasure></TemporalAccuracy_nameOfMeasure>
+<TemporalAccuracy_measureDescription></TemporalAccuracy_measureDescription>
+<TemporalAccuracy_result>
+<TemporalAccuracy_DQ_QuantitativeResult>
+<TemporalAccuracy_valueUnit></TemporalAccuracy_valueUnit>
+<TemporalAccuracy_value></TemporalAccuracy_value></TemporalAccuracy_DQ_QuantitativeResult>
+</TemporalAccuracy_result>
+</TemporalAccuracy_evalqualsubname>
+</TemporalAccuracy>
+<ThematicAccuracy>
+<ThematicAccuracy_evalqualsubname>
+<ThematicAccuracy_nameOfMeasure></ThematicAccuracy_nameOfMeasure>
+<ThematicAccuracy_measureDescription></ThematicAccuracy_measureDescription>
+<ThematicAccuracy_result>
+<ThematicAccuracy_DQ_QuantitativeResult>
+<ThematicAccuracy_valueUnit></ThematicAccuracy_valueUnit>
+<ThematicAccuracy_value></ThematicAccuracy_value></ThematicAccuracy_DQ_QuantitativeResult>
+</ThematicAccuracy_result>
+</ThematicAccuracy_evalqualsubname>
+</ThematicAccuracy>
+</report>
+<LI_Lineage>
+<statement>Para la realización de este producto, se consideraron los 27 índices de extremos climáticos formulados por El Grupo de Expertos en Detención e Índices de Cambio Climático (ETCCDI), auspiciado por la Comisión Climatológica de la Organización Meteorológica Mundial y el proyecto CLIVAR (Clima y Océano: Variabilidad, previsibilidad y Cambio), y dos más de temperatura. Se utilizaron, como insumo, datos diarios de temperatura máxima, temperatura mínima y precipitación provenientes de la Base de Datos Climatológica del Servicio Meteorológico Nacional (disponible en el año 2014). También, se utilizó el módulo RClimDex v. 1.0, ejecutado en el software R versión 3.1.2 para el cálculo de los índices. Además, se usó ProClim y Arcmap para el procesamiento e integración de la información. A pesar de que la base de datos utilizada incluyó alrededor de 5324 estaciones meteorológicas, se seleccionaron aquellas que contaron con registros dentro del periodo de 1902 a 2012 y que presentaron un máximo de 30% de datos faltantes en los años con datos (1494 estaciones). Esto último fue necesario considerarlo ya que el cálculo de los índices depende críticamente de la integridad de serie de los datos, y años incompletos en el período de análisis o uno de sus subperíodos, implica que sean excluidos del análisis, lo que impacta en la completitud de las series de los índices y por consecuencia en el total de estaciones a usarse. A partir del cálculo de los índices, se construyeron las series mensuales, anuales y estacionales sobre promedios, anomalías y tendencias lineales, con la finalidad de tener un panorama general de su comportamiento e identificar patrones de cambio en el país. </statement>
+<LI_ProcessStep>
+<LI_ProcessStep_description>1. Recuperación de datos insumo, periodo de análisis y selección de estaciones.
+
+De la Base de Datos Climatológica del Servicio Meteorológico Nacional se recuperó la correspondiente a los datos diarios de temperatura máxima, temperatura mínima y precipitación (5324 estaciones) que abarca periodos de 1902 a 2012. De ella, se seleccionaron las estaciones meteorológicas que contaron con un máximo de 30% de datos faltantes en los años con datos (1494 estaciones), bajo la consideración de que el cálculo de los índices depende críticamente de la integridad de serie de los datos, y años incompletos en el período de análisis o uno de sus subperíodos, implica que sean excluidos del análisis, lo que impacta en la completitud de las series de los índices y por consecuencia en el total de estaciones a usarse.
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>2. Determinación de los índices de extremos climáticos.
+
+Se adoptaron los índices propuestos por el Grupo de Expertos en Detección e Índices de Cambio Climático (ETCCDI) formado conjuntamente por la OMM, el proyecto de variabilidad climática (CLIVAR) y la Comisión Conjunta de Oceanografía y Meteorología Marítima (JCOMM), quienes propusieron un conjunto de 27 índices de cambio climático útiles en la detección y el monitoreo de cambios en los extremos del clima.
+
+Para la determinación y obtención de los valores de estos 27 índices de extremos climáticos, más dos de temperatura, se utilizó el módulo RClimDex v. 1.0, que es un software que se basa en una muy poderosa herramienta estadística en lenguaje de R, ejecutado en el software R versión 3.1.2. El cálculo de estos índices se hizo en una base mensual o anual, para lo cual se consideraron como temperaturas umbrales las siguientes: 25 °C umbral superior de temperatura máxima diaria, 20 °C umbral superior de temperatura mínima diaria, 0 °C para el umbral inferior en ambos casos y un umbral diario de precipitación de 25 mm.
+
+Previó al cálculo, hubo que extraer, de la base de datos y de manera individual (por estación), los datos diarios de temperatura y precipitación y estructurarlos de acuerdo al formato internacionalmente conocido como -formato Rclimdex- para cargarlos al software e iniciar el proceso del cálculo de los índices.
+
+Abajo, se enlistan, a manera de resumen: nombre de los índices, definiciones, unidades, tipo de índice y tipo de serie de datos, así como el criterio utilizado de regionalización del que se habla más adelante.
+
+
+1. Días secos consecutivos (CDD): Número máximo de días consecutivos donde la cantidad diaria de precipitación en el día es menor a 1mm. Tipo de índice: Duración. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+2. Días húmedos consecutivos (CWD): Número máximo de días consecutivos donde la cantidad diaria de precipitación en el día>=1mm. Tipo de índice: Duración. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+3. Precipitación total anual en los días húmedos (PRCPTOT): Precipitación anual total en los días húmedos (cantidad diaria de precipitación en el día>=1mm). Tipo de índice: Absolutos. Unidad de medida: mm. Serie: Anual. Criterio de regionalización: Promedio.
+4. Número de días con lluvia mayor a 10 mm (intensa) (R10mm): Número de días en un año en que la cantidad diaria de precipitación>=10mm. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+5. Número de días con lluvia mayor a 20 mm (muy intensa) (R20mm): Número de días en un año en que la cantidad diaria de precipitación en el día>=20mm. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+6. Número de días con lluvia mayor a 25 mm (muy intensa) (R25mm): Número de días en un año en que la cantidad diaria de precipitación en el día>=25mm. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+7. Días muy húmedos (R95p): Precipitación anual total en que la cantidad diaria de precipitación en un día húmedo>95 percentil. Tipo de índice: Percentiles. Unidad de medida: mm. Serie: Anual. Criterio de regionalización: Promedio.
+8. Días extremadamente húmedos (R99p): Precipitación anual total en que la cantidad diaria de precipitación en un día húmedo>99 percentil. Tipo de índice: Percentiles. Unidad de medida: mm. Serie: Anual. Criterio de regionalización: Promedio.
+9. Precipitación máxima en un día (RX1day): Máximo mensual de precipitación en 1 día. Tipo de índice: Absolutos. Unidad de medida: mm. Serie: Mensual. Criterio de regionalización: Máximo.
+10. Precipitación máxima en cinco días (Rx5day): Máximo mensual de precipitación en 5 días consecutivos. Tipo de índice: Absolutos. Unidad de medida: mm. Serie: Mensual. Criterio de regionalización: Máximo.
+11. Índice de intensidad diaria de precipitación (SDII): Precipitación anual total dividida para el número de días húmedos (definidos por PRCP>=1.0mm) en un año. Tipo de índice: Percentiles. Unidad de medida: Mm/día. Serie: Anual. Criterio de regionalización: Promedio.
+12. Duración de los períodos fríos (CSDI): Número de días en un año con por lo menos 6 días consecutivos en que la temperatura mínima diaria es menor a 10th percentil. Tipo de índice: Duración. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+13. Rango diurno de temperatura (DTR): Diferencias de media mensual entre las temperaturas diarias máximas y mínimas. Tipo de índice: Otros índices. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Promedio.
+14. Días de heladas (fríos) (FD0): Número de días en un año cuando la temperatura mínima diaria es menor a 0ºC. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+15. Duración de la estación de cultivo (GSL): Anual (1st Ene a 31st Dic en HN, 1st Julio a 30th junio en HS) cuenta entre el primer periodo de por lo menos 6 días con temperatura media>5ºC y primer periodo después de Julio 1 (enero 1 en HS) de 6 días con temperatura media es menor a 5ºC. Tipo de índice: Duración. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+16. Días de hielo (muy fríos) (ID0): Número de días en un año cuando la temperatura máxima diaria es menor a 0ºC. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+17. Días de verano (calurosos o muy cálidos) (SU25): Número de días en un año cuando la temperatura máxima diaria>25ºC. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+18. Frecuencia de noches frías (TN10p): Porcentaje de días cuando la temperatura mínima diaria10th percentil. Tipo de índice: Percentiles. Unidad de medida: Días. Serie: Mensual. Criterio de regionalización: Promedio.
+19. Frecuencia de noches cálidas (TN90p): Porcentaje de días cuando la temperatura mínima diaria>90th percentil. Tipo de índice: Percentiles. Unidad de medida: Días. Serie: Mensual. Criterio de regionalización: Promedio.
+20. Temperatura mínima extrema (TNn): Valor mensual mínimo de temperatura mínima diaria. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Mínimo.
+21. Temperatura mínima más alta (TNx): Valor mensual máximo de temperatura mínima diaria. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Máximo.
+22. Noches tropicales (TR20): Número de días en un año cuando la temperatura mínima diaria>20ºC. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+23. Frecuencia de días frescos o fríos (TX10p): Porcentaje de días cuando la temperatura máxima diaria10th percentil. Tipo de índice: Percentiles. Unidad de medida: Días. Serie: Mensual. Criterio de regionalización: Promedio.
+24. Frecuencia de días calurosos o calientes (TX90p): Porcentaje de días cuando la temperatura máxima diaria>90th percentil. Tipo de índice: Percentiles. Unidad de medida: Días. Serie: Mensual. Criterio de regionalización: Promedio.
+25. Temperatura máxima más baja (TXn): Valor mensual mínimo de temperatura máxima diaria. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Mínimo.
+26. Temperatura máxima extrema (TXx): Valor mensual máximo de temperatura máxima diaria. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Máximo.
+27. Duración de los períodos cálidos o calientes (WSDI): Número de días en un año con por lo menos 6 días consecutivos en que la temperatura máxima diaria>90th percentil. Tipo de índice: Umbrales. Unidad de medida: Días. Serie: Anual. Criterio de regionalización: Promedio.
+28. Temperatura máxima promedio (TMAXMEAN): Valor medio anual de temperatura máxima. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Promedio.
+29. Temperatura mínima promedio (TMINMEAN): Valor medio anual de temperatura mínima. Tipo de índice: Absolutos. Unidad de medida: º C. Serie: Mensual. Criterio de regionalización: Promedio.
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>3.  Integración de archivos individuales por índice.
+
+Dado que durante el cálculo de los índices se obtiene un archivo para cada índice y estación por separado, fue necesario, a partir de los 43 326 archivos ya disponibles de los índices de extremos climáticos (29 índices por cada una de las1494 estaciones), estructurar e integrar, para cada índice, un solo archivo (*.dbf), con todos sus valores por año y estación; lo anterior con la finalidad de contar con un solo archivo base que permita procesar de manera más integral, sencilla y eficiente los datos (29 tablas de índices de extremos climáticos), pero sobre todo para estructurarlos como base de datos, orientarlos al procesamiento de series climatológicas y procesarlos fácilmente a través de SIG.
+
+Con estos archivos ya integrados por índice y para todo el país, ya se está en posibilidad de obtener, de manera, estadísticos como los promedios, desviación estándar, coeficiente de variación, mínimo y máximo, así como, las anomalías y las tendencias por estación y por índice. 
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>4. Determinación de promedios de los índices de extremos climáticos.
+
+Con los índices ya integrados como serie climatológica, se procedió a obtener, con ayuda del software ProClim, que es un Software libre útil en el procesamiento de datos climatológicos, los promedios de las series anuales, mensuales y estacionales, a nivel de estación meteorológica, para cada uno de los 29 índices
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>5. Determinación de anomalías climáticas de los índices de extremos climáticos.
+
+Con los índices ya integrados como serie climatológica, se procedió a obtener, con ayuda del software ProClim, las anomalías de las series anuales, mensuales y estacionales, a nivel de estación meteorológica, para cada uno de los 29 índices.
+
+El análisis de las anomalías climáticas se realizó a partir de la cuantificación de la separación de un valor respecto de lo considerado normal o la media del periodo estudiado, con la finalidad de evaluar las desviaciones del parámetro en cuestión, con respecto a su media histórica y así permitiendo valorar su comportamiento hacia ambos lados de la media.
+
+En el caso de temperatura, una anomalía será positiva o negativa cuando es más caliente o frío de lo normal, respectivamente; bajo la misma idea, en el caso de la precipitación, se estaría hablando de más húmedo de lo normal -si es positiva- o seco, para el caso de que la tendencia sea negativa. 
+
+Con finalidad de hacer comparables las anomalías, también se obtuvieron las anomalías estandarizadas (anomalía/desviación estándar) para cada serie de datos.
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>6. Determinación de tendencias de los índices de extremos climáticos.
+
+Al igual que en el paso anterior, para cada una de las series de datos de los índices, se obtuvieron las tendencias, las cuales fueron identificadas a un nivel de significancia 0.05 (95 %), por lo que aquellos valores del test para el coeficiente b1 (con un modelo del tipo y=b0+b1*x, regresión lineal) mayores al valor critico obtenido se consideraron estadísticamente significativos para tendencia positivas o negativas.
+
+Los coeficientes b0 y b1 son parámetros que definen la posición e inclinación de una recta. El parámetro b1, de nuestro interés particular, conocido como la pendiente, nos indica cuánto aumenta -y- por cada aumento de una unidad en -X-. 
+
+Así, la línea de tendencia lineal y en particular el valor de la pendiente, representan una tendencia en una serie de datos a través del período de tiempo y nos indica si el conjunto de datos ha aumentado o disminuido, por ejemplo, en el caso de las temperaturas, que tanto se inclinan hacia el extremo cálido o hacia el extremo frío, y para la precipitación, si se mueven a lluvias abundantes o a la falta de lluvia.
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>7. Integración de archivos de datos espaciales de índices de extremos climáticos por estación meteorológica (archivos shp).
+
+Con ayuda de la capa de estaciones meteorológicas (archivo shp) previamente integrada y validada, así como de los archivos de promedios, anomalías y tendencias, se integró la información geoespacial (archivos shp, vectoriales tipo punto) de los índices de extremos climáticos. Para ello se utilizó ArcMap 10.3.1 y como campo relación, la clave de la estación.</LI_ProcessStep_description>
+<LI_ProcessStep_description>8. Desarrollo de la Regionalización Climática de México. 
+
+Previo a la integración de los archivos regionales, hubo que generar una propuesta digital sobre la Regionalización Climática de México. La cual se desarrolló mediante una propuesta de clasificación espacial, basada tanto en los principales factores climáticos que actúan sobre el país, como del comportamiento de la temperatura, precipitación, vientos y de la distribución de los tipos de clima en nuestro territorio. Integra aspectos conceptuales de la regionalización planteada por la Dra. Rosalía Vidal Zepeda e insumos cartográficos generados por el INEGI, con la finalidad de construir e integrar una base espacial regional a una escala menor a la del continuo nacional, que sirva de referencia en el estudio y conocimiento de las características climáticas de México, así como de los patrones de comportamiento y cambio, tanto en el régimen térmico como de humedad del país. Las fases de su construcción fueron:
+
+Fase I. Análisis de documentación.
+El inicio del trabajo se da con la consulta y revisión del documento publicado por la Dra. Rosalía Vidal Zepeda, titulado -Regiones Climáticas de México-, analizando los elementos descritos para cada una de las regiones planteadas, así como los factores que las determinan. Así, se logró tener una aproximación sobre los insumos a utilizar para elaborar la propuesta de polígonos de regiones con cobertura nacional.
+
+Fase II. Obtención de datos.
+En esta fase se realiza la consulta y descarga de información disponible en los recursos del INEGI para la República Mexicana, con los datos de temperatura media anual, precipitación media anual, unidades climáticas, curvas de nivel, Continuo de Elevaciones Mexicano (CEM) y la división estatal del Marco Geoestadístico Nacional, para los datos vectoriales se utilizan los disponibles en escala 1:1 000 000 y en el caso del CEM se utiliza con una resolución de 120 m de cobertura nacional. Se obtiene información de CONABIO sobre provincias y subprovincias fisiográficas, regiones y subcuencas hidrográficas; en escala 1:1 000 000. Como mapa base se utilizaron las disponible por ESRI y SPOT 6 Multiespectrales 2013-2014.
+
+Fase III. Integración y primera aproximación.
+Una vez recopilada la información, se realiza la agrupación de polígonos, de acuerdo a las regiones definidas en el documento consultado, que parte del principio de ser un planteamiento basado en la fisiografía del territorio. El objeto de esta actividad es aproximarnos a establecer una relación entre regiones, definiendo una delimitación y cobertura continua en el territorio nacional.
+
+Fase IV. Rectificación de límites y edición.
+Se detallan los límites de las regiones conforme al relieve y se edita como un continuo nacional. Se sobreponen las imágenes, los tipos de climas, los valores de isolíneas, tanto de temperatura, precipitación y altimetría, para ajustar los límites regionales a condiciones similares de temperatura y precipitación, pero sobre todo de tipo de clima.
+
+Fase V. Preparación y edición del producto.
+Una vez finalizado el análisis y ajuste de los polígonos, se realiza su procesamiento para referirlo al sistema de coordenadas MEXICO_ITRF_2008_LCC, escala 1:1 000 000, en formato *.shp; integrando en su tabla de atributos los campos  R_clim y NR_clim, para definir el número y nombre, respectivamente, de cada polígono de región climática (regiones: 1. Noroeste, 2. Golfo de California, 3. Pacífico Central, 4. Norte, 5. Centro, 6. Noreste, 7. Golfo de México, 8. Centro Sur, 9. Pacífico Sur, 10. Sureste y 11. Península de Yucatán). 
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>9 Determinación de los índices de extremos climáticos regionales.
+
+Para la determinación de los índices de extremos climáticos para las 11 regiones, fue necesario clasificar, de manera espacial, a que regiones pertenecían las 1494 estaciones que integran el estudio, para así obtener las estaciones por región y sus datos correspondientes. Se regionalizaron los índices tomando en cuenta la naturaleza propia del índice y su definición conceptual, considerando apara ello el criterio mostrado en la lista de los índices del paso 2. De esta manera se construyeron 297 series anuales, 3564 series mensuales y 1184 series estacionales de los 29 índices climáticos a nivel regional.
+
+
+</LI_ProcessStep_description>
+<LI_ProcessStep_description>10. Obtención de promedios, tendencias y anomalías climáticas regionales.
+
+De la misma manera que para las estaciones meteorológicas, pero a nivel regional, se obtuvieron los valores promedios, tendencias y anomalías climáticas.</LI_ProcessStep_description>
+<LI_ProcessStep_description>11. Obtención de archivos de datos espaciales regionales (archivos shp).
+
+A partir de las series de datos promedio, tendencias y anomalías climáticas regionales y la capa de polígonos de la Regionalización Climática de México, se generaron los archivos vectoriales tipo polígono para los 29 índices estudiados, utilizando ArcMap 10.3.1 y como campo relación, el número de la región climática.</LI_ProcessStep_description>
+<LI_ProcessStep_description>Tecnología empleada: Equipo PC, Microsoft Office Professional Plus 2016, RClimDex v. 1.0, ejecutado en ambiente R versión 3.1.2, ProClim y ArcGIS Desktop 10.6.
+
+Para los pasos 7 y 11, se realizó una validación de estructura de datos de los archivos finales. La cual se describe a continuación:
+
+CONTROL DE CALIDAD
+
+CRITERIO: consistencia lógica. SUBCRITERIO: consistencia de formato y dominio. 
+ÁMBITO DE LA REVISIÓN: objetos espaciales y atributos de las capas de información nacionales. INSPECCIÓN: completa. EXPLICACIÓN DE LA REVISIÓN: mediante un modelo automatizado de VALIDACIÓN DE LA ESTRUCTURA DE LOS DATOS, se revisó, capa por capa, la estructura de la tabla de atributos de los archivos vectoriales, tanto de estaciones meteorológicas como de regiones climáticas, con la finalidad de detectar inconsistencias en la estructura de los campos (ancho y tipo de datos), tomando en consideración lo reportado en el Diccionario de Datos correspondiente. De la misma manera, se verificó la correspondencia en el dominio de valores de los objetos y atributos informados. RESULTADOS DE LA REVISIÓN: menos del 0.1 % de los datos presentó alguna inconsistencia, las cuales fueron atendidas. FECHA O PERIODO DE REALIZACIÓN: marzo-junio 2021. 
+EVALUADORES: Dirección General Adjunta de Recursos Naturales y Medio Ambiente - Departamento de Procesamiento y Modelado (INEGI). OBSERVACIONES: Ninguna.
+
+
+Para el paso 7 y 11, se realizó una validación temática general que se describe a continuación:
+
+CONTROL DE CALIDAD
+
+CRITERIO: Consistencia lógica. SUBCRITERIO: Consistencia Topológica. ÁMBITO DE LA REVISIÓN: objetos espaciales. INSPECCIÓN: Completa. EXPLICACIÓN DE LA REVISIÓN: Mediante análisis vectorial se identificaron inconsistencias tales como:  coincidencia entre los diferentes límites, intersecciones, huecos entre elementos, rasgos duplicados. Para los vectoriales de las Regiones climáticas, se aplicó una tolerancia de error predeterminado en la tecnología utilizada de .001 metros. RESULTADOS DE LA REVISIÓN: Se revisó la totalidad de los elementos, detectando errores propios de la actualización de límites entre regiones, siendo la solución la verificación del límite y la corrección de los elementos. FECHA O PERIODO DE REALIZACIÓN: junio-julio de 2017. EVALUADORES: Dirección General Adjunta de Recursos Naturales y Medio Ambiente - Departamento de Regionalización Climática (INEGI). OBSERVACIONES: Ninguna.
+</LI_ProcessStep_description>
+</LI_ProcessStep>
+<LI_Source>
+<LI_Source_description>Base de Datos Climatológica del Servicio Meteorológico Nacional (https://smn.conagua.gob.mx/es/).</LI_Source_description>
+</LI_Source>
+</LI_Lineage>
+</DQ_DataQuality>
+<Attributes>
+<schemaAscii>MODELO DE DATOS VECTORIALES: la definición de entidad es de tipo vectorial, donde la representación digital de los elementos son puntos o polígonos, del componente descriptivo del fenómeno geográfico en estudio. Se distinguen unas de otras con el nombre que se les asocia, por ejemplo, estación meteorológica (punto) de región climática (polígono).
+
+Los atributos que califican y describen cada entidad, están relacionados y listados en los diccionarios de datos. Por ejemplo, los atributos para la entidad estación meteorológica, serían: clave, nombre, estado, latitud y longitud. Para la entidad región climática, número y nombre.
+
+</schemaAscii>
+<entity_detail>Modelo de datos vectoriales. Sistema Nacional de Información Geográfica.
+
+Base de Datos Geográficos de la Dirección General de Geografía y Medio Ambiente, INEGI.</entity_detail>
+</Attributes>
+<MD_Distribution>
+<accessConstraints></accessConstraints>
+<useConstraints></useConstraints>
+<otherConstraints></otherConstraints>
+<MD_Format>
+<name> </name>
+<version> </version>
+</MD_Format>
+</MD_Distribution>
+<Inf_Metadata>
+<metadataStandardName>ISO 19115 Información Geográfica - Metadatos (Norma Técnica para Metadatos).</metadataStandardName>
+<metadataStandardVersion>2003 (1.0).</metadataStandardVersion>
+<Inf_Metadata_language>ES - Español.</Inf_Metadata_language>
+<CI_ResponsibleParty>
+<Inf_Metadata_CI_ResponsibleParty_individualName>Lic. Rafael Arrioja Urzúa</Inf_Metadata_CI_ResponsibleParty_individualName>
+<Inf_Metadata_CI_ResponsibleParty_organisationName> Instituto Nacional de Estadística y Geografía - INEGI.</Inf_Metadata_CI_ResponsibleParty_organisationName>
+<Inf_Metadata_CI_ResponsibleParty_positionName> Jefe del Departamento de Administración de Metadatos.</Inf_Metadata_CI_ResponsibleParty_positionName>
+<Inf_Metadata_CI_ResponsibleParty_voice></Inf_Metadata_CI_ResponsibleParty_voice>
+<Inf_Metadata_CI_ResponsibleParty_facsimile></Inf_Metadata_CI_ResponsibleParty_facsimile>
+<Inf_Metadata_CI_ResponsibleParty_deliveryPoint> Avenida Héroe de Nacozari Sur 2301. Fraccionamiento Jardines del Parque, entre Calle INEGI, Avenida del Lago y Avenida Paseo de las Garzas.</Inf_Metadata_CI_ResponsibleParty_deliveryPoint>
+<Inf_Metadata_CI_ResponsibleParty_city> Aguascalientes</Inf_Metadata_CI_ResponsibleParty_city>
+<Inf_Metadata_CI_ResponsibleParty_administrativeArea> Dirección de Soluciones Geomáticas. Aguascalientes</Inf_Metadata_CI_ResponsibleParty_administrativeArea>
+<Inf_Metadata_CI_ResponsibleParty_postalCode>20276</Inf_Metadata_CI_ResponsibleParty_postalCode>
+<Inf_Metadata_CI_ResponsibleParty_country> México</Inf_Metadata_CI_ResponsibleParty_country>
+<Inf_Metadata_CI_ResponsibleParty_electronicMailAddress></Inf_Metadata_CI_ResponsibleParty_electronicMailAddress>
+<Inf_Metadata_CI_ResponsibleParty_role>  7. Punto de contacto: Parte que puede ser contactada para informarse sobre el recurso o adquisición del mismo.</Inf_Metadata_CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<dateStamp>2022-06-30</dateStamp>
+<Inf_Metadata_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</Inf_Metadata_characterSet>
+</Inf_Metadata>
+</Metadata>
