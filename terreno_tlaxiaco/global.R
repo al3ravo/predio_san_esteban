@@ -91,7 +91,7 @@ rnc <- st_read("data/shp_recortados/rnc.shp", quiet = TRUE)
 usv <- st_read("data/shp_recortados/usv.shp", quiet = TRUE)
 rtp <- st_read("data/shp_recortados/rtp.shp", quiet = TRUE)
 suelos <- st_read("data/shp_recortados/edafologia.shp", quiet = TRUE)
-puntos <- st_read("data/puntos/puntos_predio.geojson")
+puntos <- st_read("data/puntos/puntos_predio.geojson") 
 # clima: 
 regiones_clima <- st_read("data/shp_recortados/regiones_clima.shp", quiet = TRUE)
 promedio_anual_regional <- st_read("data/shp_recortados/promedio_anual_regional.shp", quiet = TRUE) %>%
@@ -196,10 +196,10 @@ climatologia <- st_read("data/shp_recortados/climatologia_final.shp", quiet = TR
     )
   )
 curvas_nivel <- st_read("data/shp_recortados/curvas_nivel.shp", quiet = TRUE)
-puntos_referencia <- st_read("data/shp_recortados/puntos_referencia_topografica.shp", quiet = TRUE)
+# puntos_referencia <- st_read("data/shp_recortados/puntos_referencia_topografica.shp", quiet = TRUE) # No son relevantes, no están cerca
 
 # DEM
-dem_oaxaca <- rast("data/DEM_San_Esteban.tif")
+dem_oaxaca <- rast("data/DEM_predio_aoi.tif")
 dem_proyectado <- project(dem_oaxaca, "EPSG:3857")
 valores_elevacion <- minmax(dem_proyectado)
 min_elevacion <- valores_elevacion[1]

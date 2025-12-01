@@ -12,21 +12,21 @@ mod_info_ui <- function(id) {
         width = 4,
         title = tagList(icon("file"), "Documentos"),
         solidHeader = TRUE,
-        tableOutput("tablaPDFs")
+        tableOutput(ns("tablaPDFs"))
       ),
       
       box(
         width = 4,
         title = tagList(icon("table"), "Datos geométricos básicos"),
         solidHeader = TRUE,
-        tableOutput("tablaResumen")
+        tableOutput(ns("tablaResumen"))
       ),
       
       box(
         width = 4,
         title = tagList(icon("info-circle"), "Capas usadas"),
         solidHeader = TRUE,
-        htmlOutput("linksFuentes")
+        htmlOutput(ns("linksFuentes"))
       )
     ),
     
@@ -35,7 +35,7 @@ mod_info_ui <- function(id) {
         width = 12,
         title = "Visor de documentos",
         solidHeader = TRUE,
-        uiOutput("visorPDF")
+        uiOutput(ns("visorPDF"))
       )
     )
     
@@ -75,7 +75,8 @@ mod_info_server <- function(id) {
         <li><a href='https://www.climatologylab.org/uploads/2/2/1/3/22133936/terraclimate_downloadv2.r' target='_blank'>TerraClimate (datos climáticos históricos)</a></li>
         <li><a href='https://www.inegi.org.mx/temas/edafologia/#descargas' target='_blank'>Edafología</a></li>
         <li><a href='https://www.inegi.org.mx/app/biblioteca/ficha.html?upc=889463489672' target='_blank'>Topografía</a></li>
-        <li><a href='https://portal.opentopography.org/' target='_blank'>DEM (OpenTopography)</a></li>
+        <li><a href='https://portal.opentopography.org/' target='_blank'>DEM 30 m (OpenTopography, no usado)</a></li>
+        <li><a href='https://www.inegi.org.mx/app/geo2/elevacionesmex/' target='_blank'>DEM 15 (INEGI)</a></li>
       </ul>
       ")
     })
@@ -89,7 +90,8 @@ mod_info_server <- function(id) {
     
     output$tablaPDFs <- renderTable({
       btns <- sprintf(
-        "<button class='btn btn-success' onclick=\"Shiny.setInputValue('pdf_sel', '%s', {priority: 'event'})\">Ver</button>",
+        "<button class='btn btn-success' onclick=\"Shiny.setInputValue('%s', '%s', {priority: 'event'})\">Ver</button>",
+        ns("pdf_sel"),
         pdfs$Archivo
       )
       

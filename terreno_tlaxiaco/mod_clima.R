@@ -15,7 +15,7 @@ mod_clima_ui <- function(id) {
         solidHeader = TRUE,
         
         selectInput(
-          "var_clima",
+          ns("var_clima"),
           "Variable:",
           choices = c(
             "Precipitación (ppt)" = "ppt",
@@ -32,7 +32,7 @@ mod_clima_ui <- function(id) {
         ),
         
         dateRangeInput(
-          "rango_clima",
+          ns("rango_clima"),
           "Rango de fechas",
           start = "1958-01-01",
           end = "2024-12-31"
@@ -44,7 +44,7 @@ mod_clima_ui <- function(id) {
         width = 9,
         status = "success",
         solidHeader = TRUE,
-        plotlyOutput("clima_ts", height = "350px")
+        plotlyOutput(ns("clima_ts"), height = "350px")
       )
     ),
     
@@ -54,7 +54,7 @@ mod_clima_ui <- function(id) {
         width = 6,
         status = "success",
         solidHeader = TRUE,
-        plotlyOutput("clima_mensual", height = "350px")
+        plotlyOutput(ns("clima_mensual"), height = "350px")
       ),
       
       box(
@@ -62,7 +62,7 @@ mod_clima_ui <- function(id) {
         width = 6,
         status = "success",
         solidHeader = TRUE,
-        plotlyOutput("clima_tendencia", height = "350px")
+        plotlyOutput(ns("clima_tendencia"), height = "350px")
       )
     )
 

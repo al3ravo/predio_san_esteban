@@ -1,5 +1,4 @@
 # Análisis
-setwd("terreno_tlaxiaco")
 
 library(sf)
 library(terra)
@@ -38,13 +37,8 @@ aoi_wgs84 <- st_transform(aoi_buffer, crs = 4326) # Para cruzar con capas lat/lo
 # ANÁLISIS TOPOGRÁFICO
 # =============================
 
-# Cargar tu DEM (OpenTopography)
-dem <- rast("data/DEM_aws_z12.tif")
-dem_utm <- project(dem, crs(aoi_buffer), method = "bilinear")
-
-# Recortar el DEM al AOI
-dem_sitio <- crop(dem_utm, vect(aoi_buffer))
-dem_sitio <- mask(dem_sitio, vect(aoi_buffer))
+# Cargar tu DEM (INEGI)
+dem_sitio <- rast("data/DEM_predio_aoi.tif")
 
 # Calcular Pendiente (Slope) y Orientación (Aspect)
 topografia <- terra::terrain(dem_sitio, v = c("slope", "aspect"), unit = "degrees")
@@ -143,12 +137,13 @@ pendiente_class <- classify(
   rcl = matrix(c(
     0, 10, 1,   # Plano
     10, 20, 2,  # Medio
-    20, 35, 3,  # Ladera
-    35, 90, 4   # Escarpado
+    20, 35, 3  # Ladera
+    #35, 90, 4   # Escarpado
   ), ncol = 3, byrow = TRUE)
 )
 # Convertir a factor/categórico
 pendiente_class <- as.factor(pendiente_class)
+pendiente_class[is.na(pendiente_class)] <- 0  # O cualquier valor fuera de la escala
 
 # 2. Mapa de Distancia al Agua (Río + Pozo)
 # Primero, necesitamos rasterizar el río y el pozo
@@ -185,25 +180,25 @@ mapa_pendiente <-
     values = c(
       "1" = "#4CAF50",  # Verde
       "2" = "#FFEB3B",  # Amarillo
-      "3" = "#FF9800",  # Naranja
-      "4" = "#F44336"   # Rojo
+      "3" = "#FF9800"  # Naranja
+      #"4" = "#F44336"   # Rojo
     ),
     labels = c(
       "1" = "Plano (0–10°)",
       "2" = "Medio (10–20°)",
-      "3" = "Ladera (20–35°)",
-      "4" = "Escarpado (>35°)"
+      "3" = "Ladera (20–35°)"
+      #"4" = "Escarpado (>35°)"
     ),
     name = "Aptitud por Pendiente",
-    na.value = "transparent"
-  ) +
+    #na.value = "transparent",
+    na.translate = FALSE) +
   geom_sf(data = terreno_utm_sf, fill = NA, color = "black", size = 0.5) +
   geom_sf(data = rios_cercanos, color = "blue", size = 1) +
   geom_sf(data = pozo_utm_sf, color = "blue", shape = 18, size = 4) +
   labs(
     title    = "Mapa de Aptitud del Terreno",
-    subtitle = "San Esteban Atatlahuca (Basado en Pendiente)",
-    caption  = "Verde: Cultivos anuales | Amarillo: Frutales/Agave | Naranja: Forestal/Cabañas"
+    subtitle = "San Esteban Atatlahuca (Basado en Pendiente)"
+    #caption  = "Verde: Cultivos anuales | Amarillo: Frutales/Agave | Naranja: Forestal/Cabañas"
   ) +
   theme_minimal()
 
@@ -224,8 +219,14 @@ print(mapa_agua)
 
 # Calcular cuántas hectáreas hay de cada clase
 freq(pendiente_class) %>% 
-  mutate(has = count * res(pendiente_class)[1] * res(pendiente_class)[2] / 10000) %>%
-  select(value, has)
+  mutate(has = count * res(pendiente_class)[1] * res(pendiente_class)[2] / 10000,
+         label = case_when(
+           value == "1" ~ "Plano (0–10°)",
+           value == "2" ~ "Medio (10–20°)",
+           value == "3" ~ "Ladera (20–35°)"),
+         total = sum(has),
+         porcentaje = round((has / total) * 100, 2) ) %>%
+  select(label, has, porcentaje)
 
 
 

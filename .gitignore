@@ -2,6 +2,14 @@
 .Rhistory
 .RData
 .Ruserdata
+
+.mailmap
+author-email=al3ravo@gmail.com
+author-name=Arturo
+committer-email=al3ravo@gmail.com
+replace_author.txt
+replace_email.txt
+
 Respaldo SHP/
 terreno_tlaxiaco/data/biodiversidad/
 terreno_tlaxiaco/data/caminos/
@@ -11,3 +19,4 @@ terreno_tlaxiaco/data/hidrologia/
 terreno_tlaxiaco/data/inegi/
 terreno_tlaxiaco/data/topografia/
 terreno_tlaxiaco/data/uso_suelo_vegetacion/
+terreno_tlaxiaco/data/DEM_inegi/

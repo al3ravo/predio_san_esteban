@@ -7,11 +7,13 @@ mod_mapa_ui <- function(id) {
   ns <- NS(id)
   tagList(
     fluidRow(
-      column(4, uiOutput("areaBox")),
-      column(4, uiOutput("perimBox")),
-      box(width=4, title="Superficie por uso de suelo",
-          tableOutput("tablaUsoPredio"))
-      
+      column(4, uiOutput(ns("areaBox"))),
+      column(4, uiOutput(ns("perimBox"))),
+      box(
+        width = 4,
+        title = "Superficie por uso de suelo",
+        tableOutput(ns("tablaUsoPredio"))
+      )
     ),
     
     fluidRow(
@@ -19,7 +21,7 @@ mod_mapa_ui <- function(id) {
           title = tagList(icon("globe-americas"), "Mapa interactivo"),
           status = "primary",
           solidHeader = TRUE,
-          leafletOutput("mapa", height = "80vh")
+          leafletOutput(ns("mapa"), height = "80vh")
       )
     )
   )
@@ -193,10 +195,10 @@ mod_mapa_server <- function(id) {
             direction = "auto"
           )
         ) %>%
-        addLegend("bottomright", 
-                  pal = colorNumeric("RdYlBu", climatologia$TMIN_EN, reverse = TRUE), 
-                  values = climatologia$TMIN_EN,
-                  title = "Temp. Mínima Enero (°C)") %>% 
+        #addLegend("bottomright", 
+        #          pal = colorNumeric("RdYlBu", climatologia$TMIN_EN, reverse = TRUE), 
+        #          values = climatologia$TMIN_EN,
+        #          title = "Temp. Mínima Enero (°C)") %>% 
         
         addPolygons(
           data = promedio_anual_regional,
@@ -219,17 +221,17 @@ mod_mapa_server <- function(id) {
           weight = ~ifelse(tipo_curva == "Regular", 2, 1),
           group = "Curvas de nivel",
           label = ~paste0("Elevación: ", elev, " m")
-        ) %>%
+        )
         
         # Puntos de referencia
-        addCircleMarkers(
-          data = puntos_referencia,
-          radius = 4,
-          color = "red",
-          fillOpacity = 0.9,
-          group = "Puntos de referencia topográfica",
-          label = ~nombre_ref
-        ) 
+        #addCircleMarkers(
+        #  data = puntos_referencia,
+        #  radius = 4,
+        #  color = "red",
+        #  fillOpacity = 0.9,
+        #  group = "Puntos de referencia topográfica",
+        #  label = ~nombre_ref
+        #) 
       
       # Puntos internos del predio (si existen)
       if (exists("puntos") && nrow(puntos) > 0) {
@@ -284,7 +286,7 @@ mod_mapa_server <- function(id) {
             "Promedios anuales regionales",
             "Suelos",
             "Curvas de nivel",
-            "Puntos de referencia topográfica",
+            #"Puntos de referencia topográfica",
             "Modelo Digital de Elevación (DEM)"
           ),
           options = layersControlOptions(collapsed = FALSE)
@@ -313,7 +315,7 @@ mod_mapa_server <- function(id) {
           "Promedios anuales regionales",
           "Suelos",
           "Curvas de nivel",
-          "Puntos de referencia topográfica",
+          #"Puntos de referencia topográfica",
           "Modelo Digital de Elevación (DEM)"
           #"Puntos predio"
         )) %>%

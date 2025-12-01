@@ -3,6 +3,11 @@ setwd("terreno_tlaxiaco")
 
 library(sf)
 library(tidyverse)
+library(terra)
+
+# ==============================================================================
+# 1. SHP del predio
+# ==============================================================================
 
 #
 # Recortaré solo San Esteban Atatlahuca y municipios colindantes. 
@@ -21,6 +26,16 @@ mun_buffer <- rbind(mun_target, mun_vecinos)
 #
 # Crear un bounding box
 bb <- st_bbox(mun_buffer)
+
+#
+# SHP de puntos dentro del predio
+pts <- st_read("data/perimetro/perimetro_tlaxiaco.geojson", quiet = TRUE)
+st_write(pts, "data/puntos/puntos_predio.geojson")
+
+
+# ==============================================================================
+# 2. SHP de información
+# ==============================================================================
 
 #
 # Recortar todos los shp y guardar
@@ -197,8 +212,6 @@ noche_anormalmente_frias <- st_read("data/climatologia/tendencia_regional_tn10p.
 st_write(noche_anormalmente_frias, "data/shp_recortados/noche_anormalmente_frias.shp")
 
 
-
-
 capa_maestra <- regiones_clima %>% 
   select(R_CLIM = R_clim, NR_CLIM = NR_clim) # Nos quedamos solo con los IDs básicos
 
@@ -226,7 +239,7 @@ df_heladas <- st_drop_geometry(dias_heladas) %>%
 df_dias_secos <- st_drop_geometry(dias_secas_consecutivos) %>% 
   select(R_CLIM, DIAS_SECOS = CDD_P)
 
-# 3. UNIÓN DE DATOS (LEFT JOIN)
+# UNIÓN DE DATOS (LEFT JOIN)
 # Usamos R_CLIM como llave para pegar todo a la capa maestra
 
 climatologia_final <- capa_maestra %>%
@@ -238,7 +251,7 @@ climatologia_final <- capa_maestra %>%
   left_join(df_heladas, by = "R_CLIM") %>% 
   left_join(df_dias_secos, by = "R_CLIM")
 
-# 4. CREACIÓN DE LA ETIQUETA INTELIGENTE (Compacta)
+# CREACIÓN DE LA ETIQUETA INTELIGENTE (Compacta)
 # Usamos estilos CSS para hacerla pequeña pero legible
 
 climatologia_final <- climatologia_final %>%
@@ -326,7 +339,30 @@ ref <- st_read("data/topografia/referencia_g250_p.shp") %>%
   filter(!st_is_empty(.))
 st_write(ref, "data/shp_recortados/puntos_referencia_topografica.shp")
 
-# DEM (descarga)
+
+## tibbles: 
+vars_clima_utiles <- c(
+  # Temperatura
+  "TMINMEANP","TMAXMEANP","TNN_P","TNX_P","TXN_P","TXX_P","DTR_P",
+  # Precipitación
+  "PRCPT_P","R10MM_P","R20MM_P","R25MM_P","R95P_P","R99P_P",
+  "SDII_P","Rx1DAYP","Rx5DAYP",
+  # Fenología
+  "GSL_P","CDD_P","CWD_P",
+  # Otros extremos
+  "FDO_P","SU25_P","TR20_P"
+)
+
+clima_predio_filtrado <- promedio_anual_regional %>%
+  as_tibble() %>%  
+  select(any_of(vars_clima_utiles))
+
+
+# ==============================================================================
+# 3. DEM
+# ==============================================================================
+
+# descarga OpenTopography
 library(FedData)
 library(sf)
 library(terra)
@@ -376,33 +412,36 @@ plot(dem_full, main = "DEM de la Región Mixteca (SRTM - 30m)")
 plot(dem_shiny, main = "DEM de la Región Mixteca (SRTM - 90m)")
 
 
+# DEM INEGI
+
+# 1. Cargar el DEM de INEGI (Asegúrate de apuntar a la carpeta donde están los 4 archivos)
+# Solo llamas al .tif
+dem_inegi <- rast("data/DEM_inegi/continuonacional_15m.tif")
+
+# 2. Verificar Sistema de Coordenadas (CRS)
+# Si al imprimir 'dem_inegi' ves que dice "LCC" o algo distinto a tus capas anteriores...
+print(dem_inegi) 
+
+# 3. Reproyectar a UTM Zona 14N (EPSG:32614)
+# Es CRÍTICO hacer esto para que las pendientes (grados) y distancias se calculen bien.
+# Usamos el objeto 'aoi_buffer' que creamos antes como referencia si ya estaba en UTM, ESTÁ EN ANALISIS
+# o forzamos la proyección UTM directa:
+dem_utm <- project(dem_inegi, "EPSG:32614", method = "bilinear")
+
+# 4. Recortar al área de interés (Buffer)
+# Usamos el buffer de 150m que creamos en pasos anteriores
+dem_sitio <- crop(dem_utm, vect(aoi_buffer))
+dem_sitio <- mask(dem_sitio, vect(aoi_buffer))
+
+writeRaster(dem_sitio,
+            "data/DEM_predio_aoi.tif",
+            overwrite = TRUE)
 
 
 
-## tibbles: 
-vars_clima_utiles <- c(
-  # Temperatura
-  "TMINMEANP","TMAXMEANP","TNN_P","TNX_P","TXN_P","TXX_P","DTR_P",
-  # Precipitación
-  "PRCPT_P","R10MM_P","R20MM_P","R25MM_P","R95P_P","R99P_P",
-  "SDII_P","Rx1DAYP","Rx5DAYP",
-  # Fenología
-  "GSL_P","CDD_P","CWD_P",
-  # Otros extremos
-  "FDO_P","SU25_P","TR20_P"
-)
-
-clima_predio_filtrado <- promedio_anual_regional %>%
-  as_tibble() %>%  
-  select(any_of(vars_clima_utiles))
-
-
-#
-# SHP de puntos dentro del predio
-pts <- st_read("data/perimetro/perimetro_tlaxiaco.geojson", quiet = TRUE)
-st_write(pts, "data/puntos/puntos_predio.geojson")
-
-
+# ==============================================================================
+# 4. TerraClimate
+# ==============================================================================
 
 # Datos TerraClimate
 # https://www.climatologylab.org/uploads/2/2/1/3/22133936/terraclimate_downloadv2.r
@@ -428,9 +467,7 @@ if (!dir_exists(dir_path)) {
   message("Directorio creado: ", dir_path)
 }
 
-# ==============================================================================
-# 2. OBTENER GEOMETRÍA DE LA REJILLA (Solo se hace una vez)
-# ==============================================================================
+# OBTENER GEOMETRÍA DE LA REJILLA (Solo se hace una vez)
 message("--- Calculando geometría de la rejilla (usando ppt como referencia) ---")
 
 # Usamos 'ppt' como referencia para obtener índices de lat/lon y fechas
@@ -460,9 +497,7 @@ date_seq <- seq(as.Date("1958-01-01"), by = "month", length.out = time_dim)
 nc_close(nc_ref) # Cerramos la referencia
 message("Geometría calculada. Iniciando descarga de ", length(vars), " variables...")
 
-# ==============================================================================
-# 3. FUNCIÓN DE DESCARGA
-# ==============================================================================
+# FUNCIÓN DE DESCARGA
 
 download_and_save <- function(variable) {
   
@@ -506,9 +541,7 @@ download_and_save <- function(variable) {
   })
 }
 
-# ==============================================================================
-# 4. EJECUCIÓN (MAP/WALK)
-# ==============================================================================
+# EJECUCIÓN (MAP/WALK)
 
 # Usamos walk porque nos interesa el efecto secundario (guardar archivo) 
 # y no necesitamos que devuelva una lista enorme a la memoria de R ahora mismo.
@@ -517,9 +550,7 @@ walk(vars, download_and_save)
 message("--- ¡Proceso finalizado! ---")
 
 
-# ==============================
-# 5. Integrar en un solo tibble
-# ==============================
+# Integrar en un solo tibble
 
 files <- dir_ls("data/terraclimate", glob = "*.csv")
 
